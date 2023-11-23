@@ -13,7 +13,7 @@ const ProductsList: React.FC = () => {
 	)
 
 	return (
-		<div>
+		<div className='products-grid'>
 			{filteredProducts.map((product) => (
 				<ProductCard key={product.id} product={product} />
 			))}

@@ -4,6 +4,7 @@ import { setProducts } from './features/productsSlice'
 import { fetchProducts } from './data/productsMock'
 import SearchBar from './components/SearchBar'
 import ProductsList from './components/ProductsList'
+import './App.css'
 
 const App: React.FC = () => {
 	const dispatch = useDispatch()
