@@ -2,9 +2,10 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { setProducts } from './features/productsSlice'
 import { fetchProducts } from './data/productsMock'
-import SearchBar from './components/SearchBar'
 import ProductsList from './components/ProductsList'
 import './App.css'
+import Header from './components/Header'
+import LandingImage from './components/LandingImage'
 
 const App: React.FC = () => {
 	const dispatch = useDispatch()
@@ -16,10 +17,11 @@ const App: React.FC = () => {
 	}, [dispatch])
 
 	return (
-		<div>
-			<SearchBar />
+		<>
+			<Header />
+			<LandingImage />
 			<ProductsList />
-		</div>
+		</>
 	)
 }
 

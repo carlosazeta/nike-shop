@@ -8,3 +8,73 @@
 .product-card img {
 	width: 100%;
 }
+
+.header-wrapper {
+	width: 100%;
+	height: 4rem;
+	display: flex;
+	padding: 20px;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+}
+
+.search-bar {
+	height: 2rem;
+	width: 20%;
+	margin-right: 2.2rem;
+	border-color: transparent;
+	color: #b4b4b4;
+	background-color: #f6f6f6;
+	border-radius: 16px;
+	font-family: inherit;
+}
+
+.search-bar[type='text'] {
+	text-indent: 10px;
+}
+
+.search-bar:hover {
+	outline: none;
+	color: #999999;
+	background-color: #dadada;
+}
+
+.search-bar::placeholder {
+	color: inherit;
+	opacity: 1;
+}
+
+.logo-link {
+	text-decoration: none;
+	color: inherit;
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.landing-wrapper {
+	display: flex;
+	align-items: flex-start; /* Alinea los elementos al inicio */
+	height: 100vh;
+	overflow: hidden; /* Evita el desbordamiento del contenedor */
+}
+
+.landing-image-wrapper {
+	width: 70%;
+	height: 100vh; /* Altura para ocupar toda la ventana */
+}
+
+.landing-image-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Estilos para el contenedor del texto */
+.landing-text-wrapper {
+	position: sticky;
+	top: 0px;
+	width: 30%; /* Ajusta según sea necesario */
+	height: 300vh; /* Aumenta la altura para permitir scroll */
+	overflow: auto; /* Permite el desplazamiento dentro del contenedor del texto */
+}

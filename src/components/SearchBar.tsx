@@ -13,7 +13,15 @@ const SearchBar: React.FC = () => {
 		dispatch(setSearchQuery(e.target.value))
 	}
 
-	return <input type='text' value={searchQuery} onChange={handleSearchChange} />
+	return (
+		<input
+			className='search-bar'
+			type='text'
+			placeholder='Search'
+			value={searchQuery}
+			onChange={handleSearchChange}
+		/>
+	)
 }
 
 export default SearchBar
