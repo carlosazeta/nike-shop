@@ -4,11 +4,13 @@ import { NikeProduct } from '../types/types'
 interface ProductsState {
 	products: NikeProduct[]
 	searchQuery: string
+	isSearchModalOpen: boolean
 }
 
 const initialState: ProductsState = {
 	products: [],
 	searchQuery: '',
+	isSearchModalOpen: false,
 }
 
 export const productsSlice = createSlice({
@@ -20,6 +22,14 @@ export const productsSlice = createSlice({
 		},
 		setSearchQuery: (state, action: PayloadAction<string>) => {
 			state.searchQuery = action.payload
+			// Abre la modal cuando hay una búsqueda, cierra cuando la búsqueda está vacía
+			state.isSearchModalOpen = action.payload.length > 0
+		},
+		openSearchModal: (state) => {
+			state.isSearchModalOpen = true
+		},
+		closeSearchModal: (state) => {
+			state.isSearchModalOpen = false
 		},
 	},
 })
