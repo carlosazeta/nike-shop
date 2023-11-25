@@ -7,13 +7,7 @@ const LandingImage: React.FC = () => {
 				<img src={shoeImage} alt='Nike shoe' />
 			</div>
 			<div className='landing-text-wrapper'>
-				<h1>
-					This{' '}
-					<span className='highlight-container'>
-						<span className='highlight'>Highlight</span>
-					</span>{' '}
-					is in the Heading
-				</h1>
+				<h2 className='highlight-green'>Nike AlphaFly Next%</h2>
 				<p>
 					Engineered for peak performance, the AlphaFly Next% stands at the
 					forefront of running shoe technology. Its cutting-edge design
