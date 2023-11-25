@@ -16,7 +16,6 @@
 	padding: 20px;
 	justify-content: space-between;
 	align-items: center;
-	position: fixed;
 }
 
 .search-bar {
@@ -54,14 +53,13 @@
 
 .landing-wrapper {
 	display: flex;
-	align-items: flex-start; /* Alinea los elementos al inicio */
+	align-items: flex-start;
 	height: 100vh;
-	overflow: hidden; /* Evita el desbordamiento del contenedor */
 }
 
 .landing-image-wrapper {
-	width: 70%;
-	height: 100vh; /* Altura para ocupar toda la ventana */
+	display: block;
+	height: auto;
 }
 
 .landing-image-wrapper img {
@@ -70,11 +68,56 @@
 	object-fit: cover;
 }
 
-/* Estilos para el contenedor del texto */
 .landing-text-wrapper {
 	position: sticky;
 	top: 0px;
-	width: 30%; /* Ajusta según sea necesario */
-	height: 300vh; /* Aumenta la altura para permitir scroll */
-	overflow: auto; /* Permite el desplazamiento dentro del contenedor del texto */
+	width: 40%;
+	height: auto;
+	margin-bottom: 5%;
+}
+
+.highlight-container,
+.highlight {
+	position: relative;
+}
+
+.highlight-container {
+	display: inline-block;
+}
+.highlight-container:before {
+	content: ' ';
+	display: block;
+	height: 90%;
+	width: 100%;
+	margin-left: -3px;
+	margin-right: -3px;
+	position: absolute;
+	background: #ffd500;
+	transform: rotate(2deg);
+	top: -1px;
+	left: -1px;
+	border-radius: 20% 25% 20% 24%;
+	padding: 10px 3px 3px 10px;
+}
+
+/* Media Query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+	.landing-wrapper {
+		flex-direction: column; /* Cambia a un diseño de columna */
+	}
+
+	.landing-image-wrapper,
+	.landing-text-wrapper {
+		width: 100%; /* Ajusta el ancho para ocupar todo el contenedor */
+		position: relative; /* Resetear la posición sticky en móviles */
+	}
+
+	.landing-text-wrapper {
+		top: unset;
+		margin-bottom: 20px;
+	}
+
+	.products-grid {
+		margin-top: 40px; /* Espacio extra arriba del grid en móviles */
+	}
 }
