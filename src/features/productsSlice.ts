@@ -34,6 +34,11 @@ export const productsSlice = createSlice({
 	},
 })
 
-export const { setProducts, setSearchQuery } = productsSlice.actions
+export const {
+	setProducts,
+	setSearchQuery,
+	openSearchModal,
+	closeSearchModal,
+} = productsSlice.actions
 
 export default productsSlice.reducer

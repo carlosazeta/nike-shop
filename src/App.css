@@ -51,6 +51,10 @@
 	font-weight: 600;
 }
 
+.featured-products-title {
+	margin-left: 20px;
+}
+
 .landing-wrapper {
 	display: flex;
 	align-items: flex-start;
@@ -96,14 +100,14 @@
 
 .products-modal-wrapper {
 	position: absolute;
-	height: 60%;
+	height: 68%;
 	width: 100%;
-	top: 0; /* Posiciona debajo del input */
+	top: 0;
 	left: 0;
 	display: flex; /* Usa flex para alinear los hijos verticalmente */
 	flex-direction: column; /* Organiza los hijos en una columna */
 	align-items: center; /* Centra los hijos horizontalmente */
-	background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+	background: #f6f6f6c5; /* Fondo semitransparente */
 	backdrop-filter: blur(5px); /* Desenfoque del fondo */
 	z-index: 10;
 }
@@ -112,21 +116,22 @@
 	width: 100%; /* O un porcentaje/ancho específico según el diseño */
 	max-width: 1800px; /* Ajusta esto para controlar el ancho máximo */
 	margin: 0 auto; /* Centra la SearchBar dentro del contenedor */
-	padding: 10px;
+	padding: 50px;
 	text-align: center;
 }
 
 .products-modal-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
 	gap: 10px;
 	margin: 0 auto; /* Centra la grid horizontalmente */
 	padding: 10px;
-	max-width: 800px; /* Ajusta esto según el ancho deseado para la grid */
+	max-width: 80%;
 }
 
 .product-item {
-	text-align: center; /* Mantiene el texto centrado dentro de cada producto */
+	font-size: 0.9rem;
+	text-align: left;
 }
 
 .product-item img {

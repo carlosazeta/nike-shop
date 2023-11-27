@@ -4,19 +4,16 @@ import { RootState } from '../store'
 import ProductCard from './ProductCard'
 
 const ProductsList: React.FC = () => {
-	const { products, searchQuery } = useSelector(
-		(state: RootState) => state.products
-	)
-
-	const filteredProducts = products.filter((product) =>
-		product.title.toLowerCase().includes(searchQuery.toLowerCase())
-	)
+	const { products } = useSelector((state: RootState) => state.products)
 
 	return (
-		<div className='products-grid'>
-			{filteredProducts.map((product) => (
-				<ProductCard key={product.id} product={product} />
-			))}
+		<div>
+			<h2 className='featured-products-title'>Featured Products</h2>
+			<div className='products-grid'>
+				{products.map((product) => (
+					<ProductCard key={product.id} product={product} />
+				))}
+			</div>
 		</div>
 	)
 }

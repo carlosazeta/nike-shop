@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setProducts } from './features/productsSlice'
+import {
+	closeSearchModal,
+	setProducts,
+	setSearchQuery,
+} from './features/productsSlice'
 import { fetchProducts } from './data/productsMock'
 import ProductsList from './components/ProductsList'
 import './App.css'
@@ -16,6 +20,13 @@ const App: React.FC = () => {
 		(state: RootState) => state.products.isSearchModalOpen
 	)
 
+	const handleCloseModal = () => {
+		if (isSearchModalOpen) {
+			dispatch(closeSearchModal())
+			dispatch(setSearchQuery(''))
+		}
+	}
+
 	useEffect(() => {
 		fetchProducts().then((products) => {
 			dispatch(setProducts(products))
@@ -23,12 +34,12 @@ const App: React.FC = () => {
 	}, [dispatch])
 
 	return (
-		<>
+		<div onClick={handleCloseModal}>
 			<Header />
 			{isSearchModalOpen && <SearchModal />}
 			<LandingImage />
 			<ProductsList />
-		</>
+		</div>
 	)
 }
 
