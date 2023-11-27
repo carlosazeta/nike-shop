@@ -58,7 +58,7 @@
 .landing-wrapper {
 	display: flex;
 	align-items: flex-start;
-	height: 100vh;
+	height: auto;
 }
 
 .landing-image-wrapper {
@@ -143,6 +143,7 @@
 /* Media Query para dispositivos móviles */
 @media screen and (max-width: 768px) {
 	.landing-wrapper {
+		height: auto;
 		flex-direction: column; /* Cambia a un diseño de columna */
 	}
 
@@ -153,7 +154,6 @@
 	}
 
 	.landing-text-wrapper {
-		top: unset;
 		margin-bottom: 20px;
 	}
 
