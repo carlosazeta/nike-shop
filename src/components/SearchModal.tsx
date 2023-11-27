@@ -22,11 +22,11 @@ const SearchModal: React.FC = () => {
 				<SearchBar />
 			</div>
 			<div className='products-modal-list'>
-				{filteredProducts.slice(0, 7).map((product) => (
+				{filteredProducts.slice(0, 6).map((product) => (
 					<div className='product-item' key={product.id}>
 						<img src={product.image} alt={product.title} />
 						<p>{product.title}</p>
-						<p>{product.category}</p>
+						<p>{product.description}</p>
 						<p>{product.price} €</p>
 					</div>
 				))}

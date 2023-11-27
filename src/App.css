@@ -124,7 +124,6 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
 	gap: 10px;
-	margin: 0 auto; /* Centra la grid horizontalmente */
 	padding: 10px;
 	max-width: 80%;
 }
@@ -141,7 +140,7 @@
 }
 
 /* Media Query para dispositivos móviles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
 	.landing-wrapper {
 		height: auto;
 		flex-direction: column; /* Cambia a un diseño de columna */
@@ -160,4 +159,14 @@
 	.products-grid {
 		margin-top: 40px; /* Espacio extra arriba del grid en móviles */
 	}
+
+	.products-modal-list {
+		grid-template-columns: repeat(auto-fill, minmax(80px, 2fr));
+	}
+
+	.products-modal-wrapper {
+		height: 90%;
+	}
 }
+
+/* MODAL */
